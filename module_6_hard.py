@@ -4,7 +4,6 @@ class Figure:
         self.__color = list(color)                                      # Скрытый атрибут для хранения цвета в RGB
         self.filled = False                                             # Публичный атрибут, заполнение фигуры
 
-    @property
     def sides_count(self):
         return len(self.__sides)                                        # Возвращает количество сторон фигуры
 
