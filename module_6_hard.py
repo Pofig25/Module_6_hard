@@ -29,7 +29,7 @@ class Figure:
 
     def set_sides(self, *new_sides):
 
-        if self.__is_valid_sides(*new_sides):                      # Устанавливает стороны, если кол-во сторон совпадает
+        if self.__is_valid_sides(*new_sides):                          # Устанавливает стороны, если кол-во совпадает
             self.__sides = list(new_sides)
 
 class Circle(Figure):
@@ -39,14 +39,14 @@ class Circle(Figure):
         super().__init__(color)                                         # Вызывает конструктор родительского класса
         self.set_sides(circumference)                                   # Устанавливает длину окружности как сторону
 
-    def get_radius(self):                                          # Вычисляет радиус круга, деля длину окружности на 2π
+    def get_radius(self):                                               # Вычисляет радиус круга
         circumference = self.get_sides()[0]                             # Достает длину окружности
-        radius = circumference / (2 * 3.1415926536)                # Вычисляет радиус
+        radius = circumference / (2 * 3.1415926536)                     # Вычисляет радиус
         return radius                                                   # Возвращает радиус
 
-    def get_square(self):                                               # Вычисляет площадь круга (πr²)
+    def get_square(self):                                               # Вычисляет площадь круга
         radius = self.get_radius()                                      # Получает радиус
-        square = 3.1415926536 * (radius ** 2)                      # Вычисляет площадь
+        square = 3.1415926536 * (radius ** 2)                           # Вычисляет площадь
         return square                                                   # Возвращает площадь
 
 
